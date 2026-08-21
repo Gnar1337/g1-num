@@ -56,7 +56,7 @@ func InitG1(num, v int) *g1 {
 	g1.wg.Add(1)
 	go g1.GenerateMultiples()
 	g1.wg.Wait()
-	fmt.Print(g1.palindromes)
+	// fmt.Print(g1.palindromes)
 	return g1
 }
 
@@ -87,10 +87,17 @@ func (g *g1) GetKids() []g1num {
 }
 
 func (g *g1) ShowAnts() string {
-	return fmt.Sprintf("%v", g.ants)
+	return fmt.Sprintf("Ancestors: %v", g.ants)
 }
 func (g *g1) ShowKids() string {
-	return fmt.Sprintf("%v", g.kids)
+	return fmt.Sprintf("kids: %v", g.kids)
+}
+
+func (g *g1) ShowPalindromes() string {
+	return fmt.Sprintf("Palindromes: %v", g.palindromes)
+}
+func (g *g1) ShowIG1Num() string {
+	return fmt.Sprintf("Improved Number: %v", g.ig1num)
 }
 
 func (g *g1) GenerateFactors() {

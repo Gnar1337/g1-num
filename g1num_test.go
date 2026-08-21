@@ -1,7 +1,6 @@
 package g1num_test
 
 import (
-	"fmt"
 	"testing"
 
 	g1num "github.com/Gnar1337/g1-num"
@@ -14,8 +13,8 @@ func TestG1Create(t *testing.T) {
 	} else {
 		t.Fail()
 	}
-	fmt.Print(g1.ShowAnts())
-	fmt.Print(g1.ShowKids())
+	// fmt.Print(g1.ShowAnts())
+	// fmt.Print(g1.ShowKids())
 }
 
 func TestAntLength(t *testing.T) {
