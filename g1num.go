@@ -104,11 +104,10 @@ func (g *g1) GenerateFactors() {
 	// g.wg.Add(1)
 	facts := make([]g1num, 0)
 	for i := 1; i <= g.GetG1()/2; i++ {
-		ant := g1num(i)
-
 		if g.GetG1()%i == 0 {
-			facts = append(facts, ant)
-			if isPalindrome(int(ant)) {
+			facts = append(facts, g1num(i))
+			if isPalindrome(i) {
+				ant := g1num(i)
 				g.palindromes = append(g.palindromes, ant)
 			}
 
